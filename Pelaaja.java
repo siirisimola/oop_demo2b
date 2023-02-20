@@ -57,14 +57,14 @@ public class Pelaaja {
      * Metodi lisää pelaajalle yhden tehdyn maalin
      */
     public void setMaalit(int maalit) {
-        this.maalit = maalit+1;
+        maalit++;
     }
 
     /**
      * Metodi lisää pelaajalle yhden syötön
      */
     public void setSyotot(int syotot) {
-        this.syotot = syotot+1;
+        syotot++;
     }
     /**
      * Palauttaa pelaajan pisteiden määrän. Pisteisiin lasketaan
@@ -72,9 +72,9 @@ public class Pelaaja {
      *
      * @return tiedon pelaajan pisteistä
      */
-    public int getPisteet(int syotot, int maalit) {
+    public int getPisteet() {
         int pisteet = syotot+maalit;
-        return (pisteet);
+        return pisteet;
     }
     /**
      * Palauttaa pelaajan tiedot merkkijonona alla olevan esimerkin
@@ -85,7 +85,7 @@ public class Pelaaja {
      */
 
     public String getPelaajaInfo() {
-        int pisteet = getPisteet(syotot, maalit);
+        int pisteet = getPisteet();
         return pelinumero +". "+ nimi + " (" + maalit + " + " + syotot + " =  " + pisteet + ")";
     }
 }
